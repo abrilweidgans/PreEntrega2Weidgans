@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FCF8F2;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Space Mono', monospace;
+}
+
+.container {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 1.2fr 0.9fr 0.9fr 0.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "header header"
+    "section-1 section-2"
+    "section-3 section-4"
+    "section-5 section-5"
+    "footer footer";
+}
+
+.header { 
+    grid-area: header;
+}
+
+.headerlogo {
+    width:  100px;
+} 
+
+.container-fluid {
+    background-color: #F5AAC3;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.section {
+    border: #F5AAC3 2px solid;
+    background-color: #FCF8F2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-1 { 
+    grid-area: section-1; 
+    background-color: #FCF8F2;
+    display: flex;
+    flex-direction: column;
+    align-items:first baseline;
+}
+
+.section-2 { 
+    grid-area: section-2; 
+    background-color: #FCF8F2;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.section2_imagen {
+    width: 300px;
+}
+
+
+.section-3 { 
+    grid-area: section-3;
+    background-color: #1D1E1E;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.section3_quiensoy {
+    width: 400px;
+}
+
+.section-4 { 
+    grid-area: section-4; 
+    background-color: #1D1E1E;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+h5 { 
+    color: whitesmoke;
+    font-weight: normal;
+    align-items: center;
+}
+
+
+.section-5 { 
+    grid-area: section-5; 
+    background-color: #FCF8F2;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+h4 { 
+    color:#1D1E1E;
+    font-weight: normal;
+    align-items: center;
+    text-align: center;
+}
+
+
+.footer { 
+    grid-area: footer; 
+    padding: 10px;
+    margin:10px;
+    background-color: #F5AAC3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.iconoredes{
+    width: 40px;
+}
+
+@media screen and (max-width:600px){
+    .container{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "header"
+    "section-1"
+    "section-2"
+    "section-3"
+    "section-4"
+    "section-5"
+    "section-5"
+    "footer";
+    } 
+}
